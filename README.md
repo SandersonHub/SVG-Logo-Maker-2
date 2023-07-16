@@ -21,6 +21,7 @@ Anyone who helped or provided me through this process up to this point!
 
 ## Direct Links
 Github Repository: https://github.com/SandersonHub/SVG-Logo-Maker-2
+
 Video Showcase: https://drive.google.com/file/d/1Gn_ffzwpxSwlbEL-Mv0hn6DM638AVDt0/view
 
 ## Feature Photos
