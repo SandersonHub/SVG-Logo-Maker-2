@@ -4,10 +4,10 @@ This will help you auto-generate a custom logo of your choosing with shapes like
 ## Getting Started
 Simply bring up your preferfed coding application and open the terminal or bash.
 
-### Dependencies
+## Dependencies
 Built with JavaScript and Node.
 
-### Installing
+## Installing
 May download the code from Github.
 
 ## Help
