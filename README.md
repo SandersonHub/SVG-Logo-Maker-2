@@ -25,4 +25,5 @@ Github Repository: https://github.com/SandersonHub/SVG-Logo-Maker-2
 Video Showcase: https://drive.google.com/file/d/1Gn_ffzwpxSwlbEL-Mv0hn6DM638AVDt0/view
 
 ## Feature Photos
-![Code_YlW8mNFUMF](https://github.com/SandersonHub/SVG-Logo-Maker-2/assets/128574459/5f218a26-9a3a-473b-b0c9-d5b1b60912f0)
+
+![Code_YlW8mNFUMF](https://github.com/SandersonHub/SVG-Logo-Maker-2/assets/128574459/a04c13ca-e68a-4cca-a1f9-c742f2cd9452)
