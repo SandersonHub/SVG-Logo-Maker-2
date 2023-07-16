@@ -1,0 +1,4 @@
+<svg width="300" height="200">
+    <circle cx="150" cy="100" r="100" fill="green" />
+    <text x="50%" y="50%" text-anchor="middle" alignment-baseline="middle" font-size="48" fill="WHITE">SVG</text>
+  </svg>
