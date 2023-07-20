@@ -2,14 +2,11 @@ const readline = require('readline');
 const fs = require('fs');
 const shapes = require('./lib/shapes');
 
-//readline, built in function with Node, accepts options
-//https://nodejs.org/api/readline.html
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
 
-//prompts the user with a question / input field
 function promptUser(question) {
   return new Promise((resolve) => {
     rl.question(question, (answer) => {
@@ -18,13 +15,12 @@ function promptUser(question) {
   });
 }
 
-//Asks the user for the three characters
 async function generateLogo() {
   const text = await promptUser('Please put in three characters: ');
 
   //text color
   const textColor = await promptUser('Enter the text color (keyword or hexadecimal): ');
-//displays the shape
+
   console.log('Choose a shape:');
   for (let i = 0; i < shapes.shapes.length; i++) {
     console.log(`${i + 1}. ${shapes.shapes[i]}`);
@@ -36,13 +32,36 @@ async function generateLogo() {
   //shape color
   const shapeColor = await promptUser('Enter the shape color, Please!: ');
 
-  //SVG content for the HTML
-  const svgContent = `<svg width="300" height="200">
-    <circle cx="150" cy="100" r="100" fill="${shapeColor}" />
-    <text x="50%" y="50%" text-anchor="middle" alignment-baseline="middle" font-size="48" fill="${textColor}">${text}</text>
-  </svg>`;
+  // SVG content for the HTML
+  let svgContent;
 
-  //covets the file to a SVG type file
+//changed how shapes are inputed, will output an SVG.
+  switch (shape) {
+    case 'triangle':
+      svgContent = `<svg width="300" height="200">
+        <polygon points="150,20 275,280 25,280" fill="${shapeColor}" />
+        <text x="50%" y="50%" text-anchor="middle" alignment-baseline="middle" font-size="48" fill="${textColor}">${text}</text>
+      </svg>`;
+      break;
+    case 'square':
+      svgContent = `<svg width="300" height="200">
+        <rect width="200" height="200" fill="${shapeColor}" />
+        <text x="50%" y="50%" text-anchor="middle" alignment-baseline="middle" font-size="48" fill="${textColor}">${text}</text>
+      </svg>`;
+      break;
+    case 'circle':
+      svgContent = `<svg width="300" height="200">
+        <circle cx="150" cy="100" r="100" fill="${shapeColor}" />
+        <text x="50%" y="50%" text-anchor="middle" alignment-baseline="middle" font-size="48" fill="${textColor}">${text}</text>
+      </svg>`;
+      break;
+    default:
+      console.error('Invalid shape selected.');
+      rl.close();
+      return;
+  }
+
+  // convert the file to an SVG type file
   fs.writeFile('logo.svg', svgContent, (err) => {
     if (err) {
       console.error('Error creating logo.svg:', err);
