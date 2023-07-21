@@ -26,4 +26,4 @@ Video Showcase: https://drive.google.com/file/d/1Gn_ffzwpxSwlbEL-Mv0hn6DM638AVDt
 
 ## Feature Photos
 
-![Code_YlW8mNFUMF](https://github.com/SandersonHub/SVG-Logo-Maker-2/assets/128574459/a04c13ca-e68a-4cca-a1f9-c742f2cd9452)
+
